@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>This MVC App is to demonstrate the use of DisplayTemplate and EditorTemplates.</p>
+    <p>Click <a asp-action="Index" asp-controller="People">here</a> to see it in action.</p>
+    <p>DisplayTemplates and EditorTemplates are particularly useful when a project should share View code across multiple Views.</p>
+    <p>DisplayTemplates are particularly useful for sharing code on the Details and Delete views.</p>
+    <p>EditorTemplates are particularly useful for sharing code on the Create and Edit views.</p>
+    <p>The trick is to create a "DisplayTemplate" and "EditorTemplate" folder underneath the Views -> Shared folder within the project.</p>
+    <p>
+        Once the folders are in place, Empty Views (cshtml) will need to be created with the name of the Model that will be passed in. <br />
+        <img src="~/KeyFolderStructure.PNG" alt="Key Folder Structure" />
+    </p>
+    <p>
+        Each View should have the @@model NameSpace.Models.ModelName that is being targetting for that view at the top, and then the rest of the code after that. <br />
+        <figure>
+            <img src="~/SampleDisplayTemplate.PNG" alt="Sample Display View" />
+            <figcaption>Views\Shared\DisplayTemplates\Person.cshtml</figcaption>
+        </figure>        
+    </p>
+    <p>
+        Once the code is ready the @@Html.DisplayForModel() or @@Html.EditorForModel() can be placed in places within other views of a similar model would be displayed. <br />
+        <figure>
+            <img src="~/SampleDisplayForModel.PNG" alt="Sample DisplayForModel" />
+            <figcaption>Views\People\Details.cshtml</figcaption>
+        </figure>
+        
+    </p>
+    <p>Now any changes made to the DisplayTemplate or EditorTemplate will be filled in on the views which were the @@Html.DisplayForModel() or @@Html.EditorForModel() were placed.</p>
+    <p>In this example the Person DisplayTemplate is used on the Details and Delete Person Views. The Person EditorTemplate is used on the Create and Edit Person Views.</p>
+</div>
