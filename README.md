@@ -16,7 +16,11 @@ Once the folders are in place, Empty Views (cshtml) will need to be created with
 
 Each View should have the @model NameSpace.Models.ModelName that is being targetting for that view at the top, and then the rest of the code after that.
 
+![Sample DisplayTemplate](https://github.com/woodman231/MVC-EditorTemplate-DisplayTemplate-Example/blob/main/MVC-EditorTemplate-DisplayTemplate-Example/wwwroot/SampleDisplayTemplate.PNG)
+
 Once the code is ready the @Html.DisplayForModel() or @Html.EditorForModel() can be placed in places within other views of a similar model would be displayed.
+
+![Sample DisplayForModel](https://github.com/woodman231/MVC-EditorTemplate-DisplayTemplate-Example/blob/main/MVC-EditorTemplate-DisplayTemplate-Example/wwwroot/SampleDisplayForModel.PNG)
 
 Now any changes made to the DisplayTemplate or EditorTemplate will be filled in on the views which were the @Html.DisplayForModel() or @Html.EditorForModel() were placed.
 
