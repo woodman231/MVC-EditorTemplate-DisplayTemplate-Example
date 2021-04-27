@@ -12,6 +12,8 @@ The trick is to create a "DisplayTemplate" and "EditorTemplate" folder underneat
 
 Once the folders are in place, Empty Views (cshtml) will need to be created with the name of the Model that will be passed in.
 
+![Key Folder Structure](https://github.com/woodman231/MVC-EditorTemplate-DisplayTemplate-Example/blob/main/MVC-EditorTemplate-DisplayTemplate-Example/wwwroot/KeyFolderStructure.PNG)
+
 Each View should have the @model NameSpace.Models.ModelName that is being targetting for that view at the top, and then the rest of the code after that.
 
 Once the code is ready the @Html.DisplayForModel() or @Html.EditorForModel() can be placed in places within other views of a similar model would be displayed.
